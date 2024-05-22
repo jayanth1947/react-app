@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
-//Create a class for the Title
-class Title extends Component {
 
-    render() {
-      return (
-        <h1>{this.props.title}</h1>
-      )
-    }
-  }
+
+// This is a stateless function
+function Title(props) {
+    return (
+        <h1>{props.title}</h1>
+    )
+}
+
 
 
 export default Title

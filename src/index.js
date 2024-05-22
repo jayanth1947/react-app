@@ -18,11 +18,25 @@ const listElement = React.createElement('ol', null,
 
 // List using index
 const newlistElement = React.createElement('ol', null,
-  elemList.map((ele,index) => React.createElement('li', { key: index }, ele)));
+  elemList.map((ele, index) => React.createElement('li', { key: index }, ele)));
+
+
+
+// JSX => It looks like a syntax of the HTML
+//Here we are embedding the array inside the JSX and this prints the array as we expected
+
+const newJSXElement =
+  <div>
+    <h1>New List</h1>
+    <ol>
+      {elemList.map((ele, index) => <li key={index} > {ele}</li>)}
+    </ol>
+  </div>
+
 
 
 // Render the above elements in the browser
-render(element, document.getElementById('root'));
-render(paraElement, document.getElementById('root'));
-render(newlistElement, document.getElementById('root'));
+//render(element, document.getElementById('root'));
+//render(paraElement, document.getElementById('root'));
+render(newJSXElement, document.getElementById('root'));
 

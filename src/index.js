@@ -41,7 +41,7 @@ class List extends Component {
 
     return (
       <ol>
-        {elemList.map((ele, index) => <li key={index} > {ele} </li>)}
+        {this.props.elemList.map((ele, index) => <li key={index} > {ele} </li>)}
       </ol>)
   }
 }
@@ -52,7 +52,7 @@ class Title extends Component {
 
   render() {
     return (
-      <h1>Task List</h1>
+      <h1>{this.props.title}</h1>
     )
   }
 }
@@ -64,8 +64,9 @@ class Main extends Component {
 
     return (
       <div>
-        <Title />
-        <List />
+        <Title title={'Games'} />
+        <List elemList={['Cricket', 'Batminton', 'Chess']} />
+        <List elemList={['Tennis', 'Hockey', 'Carroms']} />
       </div>
     )
   }

@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { ReactDOM } from "react";
+import { render } from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//For Header element
+const element = React.createElement('h1', null, 'Hello world');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// For Paragraph element
+const paraElement = React.createElement('p', null, 'The world is so beautiful');
+
+
+// For Order List elements
+const listElement = React.createElement('ol', null,
+  React.createElement('li',null,'Mango'),
+  React.createElement('li',null,'Apple'),
+  React.createElement('li',null,'Banana'),);
+
+
+// Render the above elements in the browser
+render(element, document.getElementById('root'));
+render(paraElement, document.getElementById('root'));
+render(listElement, document.getElementById('root'));
+

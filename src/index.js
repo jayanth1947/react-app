@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ReactDOM } from "react";
 import { render } from 'react-dom';
+import Main from "./Components/Main";
 
 //For Header element
 const element = React.createElement('h1', null, 'Hello world');
@@ -32,46 +33,6 @@ const newJSXElement =
       {elemList.map((ele, index) => <li key={index} > {ele}</li>)}
     </ol>
   </div>
-
-
-//Create a class for the List
-class List extends Component {
-
-  render() {
-
-    return (
-      <ol>
-        {this.props.elemList.map((ele, index) => <li key={index} > {ele} </li>)}
-      </ol>)
-  }
-}
-
-
-//Create a class for the Title
-class Title extends Component {
-
-  render() {
-    return (
-      <h1>{this.props.title}</h1>
-    )
-  }
-}
-
-
-//Create a class for the Main DOM to run by embedding all the components
-class Main extends Component {
-  render() {
-
-    return (
-      <div>
-        <Title title={'Games'} />
-        <List elemList={['Cricket', 'Batminton', 'Chess']} />
-        <List elemList={['Tennis', 'Hockey', 'Carroms']} />
-      </div>
-    )
-  }
-}
-
 
 
 // Render the above elements in the browser
